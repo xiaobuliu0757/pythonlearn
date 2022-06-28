@@ -27,7 +27,8 @@ class Soldier:
         self.gun = None
     def fire(self):
         # 1、判断士兵是否有枪
-        if self.gun == None:
+        # if self.gun == None:
+        if self.gun is None:
             print("抱歉，%s没有枪"% self.name)
             return
         # 2、高喊口号
@@ -45,4 +46,4 @@ a = Gun('AK47')
 xiaobuliu = Soldier('xiaobuliu')
 xiaobuliu.gun = a
 xiaobuliu.fire()
-print(a.bullet_count)
+# print(a.bullet_count)
