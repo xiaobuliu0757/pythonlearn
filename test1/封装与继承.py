@@ -19,8 +19,13 @@ class Tian(Dog):
 class cat(Animal):
     def catch(self):
         print("抓老鼠")
+    #     重写父类的方法
     def sleep(self):
         print('布溜睡觉觉')
+        #利用super调用父类的方法
+        super().sleep()
+
+
 # lin = Tian()
 # lin.fly()
 w = cat()
