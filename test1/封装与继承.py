@@ -24,6 +24,7 @@ class cat(Animal):
         print('布溜睡觉觉')
         #利用super调用父类的方法
         super().sleep()
+        print("hi")
 
 
 # lin = Tian()
