@@ -262,15 +262,224 @@
 高于32：严重肥胖
 '''
 
-height = float(input("请输入你的身高:（米）"))
-weight = float(input("请输入你的体重:（公斤）"))
-BMI =(weight/(height**2))
+# height = float(input("请输入你的身高:（米）"))
+# weight = float(input("请输入你的体重:（公斤）"))
+# BMI =(weight/(height**2))
+#
+# if BMI <18.5:
+#     print("亲亲，你的体重过轻哦")
+# elif BMI >=18.5 and BMI<25:
+#     print("亲亲，你的体重正常")
+# elif BMI >=25 and BMI<32:
+#     print("亲亲，你的体重正常")
+# else:
+#     print("亲亲，你的体重严重肥胖")
 
-if BMI <18.5:
-    print("亲亲，你的体重过轻哦")
-elif BMI >=18.5 and BMI<25:
-    print("亲亲，你的体重正常")
-elif BMI >=25 and BMI<32:
-    print("亲亲，你的体重正常")
-else:
-    print("亲亲，你的体重严重肥胖")
+
+# sum=0
+# for x in range(101):
+#     sum = sum + x
+# print(sum)
+
+# 计算100以内所有奇数之和
+# sum=0
+# for x in range(101):
+#
+#     if x%2 !=0:
+#         print(x)
+#         sum = sum +x
+#
+# print(sum)
+#
+#
+# sum = 0
+# n = 99
+# while n > 0:
+#     sum = sum + n
+#     print(n)
+#     n = n - 2
+#
+# print(sum)
+# 2 4 6 8 10
+#
+# L = ['Bart', 'Lisa', 'Adam']
+# for i in L:
+#     print("hi %s" %i)
+
+# n = 1
+# while n < 100:
+#     if n>=10:
+#         break
+#     print(n)
+#     n = n+1
+
+# n = 0
+# while n<10:
+#     n = n+1
+#     if n % 2 ==0:
+#         continue
+#     print(n)
+
+
+# a= -4
+# print(abs(a))
+# n1=255
+# print(hex(n1))
+# print(int(0xff))
+
+# def my_abs(x):
+# 校验数据类型
+#     if not isinstance(x,(int)):
+#         raise TypeError("类型有误，请重新输入")
+#     if x > 0:
+#         return x
+#     if x < 0:
+#         return -x
+# print(my_abs("12"))
+# def calc(*number):
+#     sum =0
+#     for i in number:
+#         sum =sum + i**2
+#     return sum
+# print(calc(1,2,3))
+
+# def mul(*numbers):
+#     if len(numbers)==0:
+#         raise TypeError("请输入数字")
+#     else:
+#         s = 1
+#         for i in numbers:
+#             s = s * i
+#         return s
+# 测试
+# print('mul(5) =', mul(5))
+# print('mul(5, 6) =', mul(5, 6))
+# print('mul(5, 6, 7) =', mul(5, 6, 7))
+# print('mul(5, 6, 7, 9) =', mul(5, 6, 7, 9))
+# if mul(5) != 5:
+#     print('测试失败!')
+# elif mul(5, 6) != 30:
+#     print('测试失败!')
+# elif mul(5, 6, 7) != 210:
+#     print('测试失败!')
+# elif mul(5, 6, 7, 9) != 1890:
+#     print('测试失败!')
+# else:
+#     try:
+#         mul()
+#         print('测试失败!')
+#     except TypeError:
+#         print('测试成功!')
+
+# def trim(s):
+#
+#     while s[:1]==' ':
+#
+#         s=s[1:]
+#
+#     while s[-1:]== ' ':
+#
+#         s=s[:-1]
+#
+#     return s
+# # 测试:
+# if trim('hello  ') != 'hello':
+#     print('测试失败!')
+# elif trim('  hello') != 'hello':
+#     print('测试失败!')
+# elif trim('  hello  ') != 'hello':
+#     print('测试失败!')
+# elif trim('  hello  world  ') != 'hello  world':
+#     print('测试失败!')
+# elif trim('') != '':
+#     print('测试失败!')
+# elif trim('    ') != '':
+#     print('测试失败!')
+# else:
+#     print('测试成功!')
+# str =[1,2,3,4,5]
+# print(str[1:])
+# print(str[:1])
+# print(str[0:])
+# dit = {'name':"xc",'age':"18"}
+# for key,value in dit.items():
+#     print(key,value)
+# for value in dit.values():
+#     print(value)
+#
+# def findMinAndMax(*L):
+#     if len(L)==0:
+#         return none,none
+#     else:
+#         min = L[0]
+#         max = L[0]
+#     for i in L :
+#         if i <=min:
+#             min = i
+#         else:
+#             pass
+#
+#     for y in L:
+#         if y >=max:
+#             max = y
+#         else:
+#             pass
+#     return min,max
+# # 测试
+# if findMinAndMax(1,2,3,4) == (1,4):
+#     print("测试通过")
+# else:
+#     print("测试失败")
+#
+# if findMinAndMax(0,2,-1) == (-1,2):
+#     print("测试通过")
+# else:
+#     print("测试失败")
+
+# A = [x*y for x in range(1,11) for y in "@%$"]
+# print(A)
+
+# L1 = ['Hello', 'World', 18, 'Apple', None]
+# L2 = [s.lower() for s in L1 if isinstance(s,str) == True]
+# print(L2)
+# 输出当前目录的所有文件
+# import os
+# q = os.listdir
+# l1 = {d for d in os.listdir('.')}
+# print(l1)
+
+def triangles():
+    L = [1]
+
+    while True:
+        yield L
+
+        L = [1] + [L[n] + L[n + 1] for n in range(len(L) - 1)] + [1]
+
+# n = 0
+# results = []
+# for t in triangles():
+#     results.append(t)
+#     n = n + 1
+#     if n == 10:
+#         break
+#
+# for t in results:
+#     print(t)
+#
+# if results == [
+#     [1],
+#     [1, 1],
+#     [1, 2, 1],
+#     [1, 3, 3, 1],
+#     [1, 4, 6, 4, 1],
+#     [1, 5, 10, 10, 5, 1],
+#     [1, 6, 15, 20, 15, 6, 1],
+#     [1, 7, 21, 35, 35, 21, 7, 1],
+#     [1, 8, 28, 56, 70, 56, 28, 8, 1],
+#     [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+# ]:
+#     print('测试通过!')
+# else:
+#     print('测试失败!')
+
