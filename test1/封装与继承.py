@@ -15,5 +15,15 @@ class Dog(Animal):
 class Tian(Dog):
     def fly(self):
         print("飞吧")
-lin = Tian()
-lin.fly()
+
+class cat(Animal):
+    def catch(self):
+        print("抓老鼠")
+    def sleep(self):
+        print('布溜睡觉觉')
+# lin = Tian()
+# lin.fly()
+w = cat()
+w.sleep()
+
+
