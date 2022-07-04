@@ -17,6 +17,7 @@ class Game(object):
     def show_top_score(cls):
         print("历史记录： %d" %cls.top_score)
 
+
     # 实例方法
     def start_game(self):
         print("欢迎你，%s"%self.player_name)
